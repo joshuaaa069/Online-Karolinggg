@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Merry Christmas 🎄</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #c62828, #2e7d32);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 25px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .qr {
+            margin: 20px 0;
+        }
+
+        .qr img {
+            width: 250px;
+            max-width: 100%;
+            border-radius: 15px;
+            background: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+
+        footer {
+            margin-top: 15px;
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎄 Merry Christmas! 🎄</h1>
+    <p>namamasko po! 🎁</p>
+
+    <div class="qr">
+        <h2>GCash QR Code</h2>
+           <img src="gcash-qr.png" alt="GCash QR Code">
+    </div>
+
+    <h2>🎬 Christmas Video</h2>
+
+    <video id="video" autoplay loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <footer>
+        Thank you & God Bless ❤️
+    </footer>
+</div>
+
+<script>
+    const video = document.getElementById("video");
+
+    video.volume = 1.0;
+    video.muted = false;
+
+    video.play().catch(() => {
+        document.body.addEventListener("click", () => {
+            video.muted = false;
+            video.play();
+        }, { once: true });
+    });
+</script>
+
+</body>
+</html>
